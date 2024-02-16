@@ -9,6 +9,18 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
+  theme: {
+    extend: {
+      animation: {
+        gradient: "gradient 60s linear infinite",
+      },
+      keyframes: {
+        gradient: {
+          to: { "background-position": "600% center" },
+        },
+      },
+    },
+  },
   plugins: [
     nextui({
       defaultTheme: "dark",
