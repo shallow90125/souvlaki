@@ -96,7 +96,7 @@ export const skills = {
   spring: {
     name: "SpringBoot",
     rating: 3,
-    icon: <SiSpringboot />,
+    icon: <SiSpringboot size={40} color="default" />,
   },
   c: {
     name: "C++",
