@@ -173,7 +173,7 @@ hr {
 
 .markdown {
 	a {
-		@apply text-purple-300;
+		@apply text-purple-500;
 	}
 
 	a:hover {
@@ -184,8 +184,25 @@ hr {
 		@apply px-2 py-4 text-2xl font-bold;
 	}
 
+	p,
+	a {
+		@apply break-words pb-2;
+	}
+
 	h3 {
 		@apply p-2 text-lg;
+	}
+
+	ol li {
+		@apply ml-6 list-decimal;
+	}
+
+	ul li {
+		@apply ml-6 list-disc;
+	}
+
+	iframe {
+		@apply py-4;
 	}
 }
 
