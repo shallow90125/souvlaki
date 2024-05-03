@@ -1,0 +1,16 @@
+<header
+	class="sticky top-0 z-50 grid h-16 place-content-stretch place-items-stretch backdrop-blur-2xl"
+>
+	<div class="res flex place-content-stretch items-center justify-items-start gap-4">
+		<a href="/" class="text-lg font-bold"> souvlaki.dev </a>
+		<a href="/about" class={`${Astro.url.pathname.startsWith('/about') && 'text-pink-500'}`}>
+			about
+		</a>
+		<a href="/skills" class={`${Astro.url.pathname.startsWith('/skills') && 'text-fuchsia-500'}`}
+			>skills</a
+		>
+		<a href="/works" class={`${Astro.url.pathname.startsWith('/works') && 'text-purple-500'}`}
+			>works</a
+		>
+	</div>
+</header>
