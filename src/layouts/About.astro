@@ -2,12 +2,11 @@
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Social from '../components/Social.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import Layout from './Layout.astro';
-
-const { frontmatter } = Astro.props;
 ---
 
-<Layout title="about" description="about">
+<Layout title={`about | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
 	<Header />
 	<main
 		class="res grid min-h-[calc(100dvh-4rem)] flex-col place-content-center place-items-center gap-4 lg:grid-cols-2"

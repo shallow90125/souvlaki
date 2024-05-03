@@ -1,0 +1,40 @@
+---
+import { Icon } from 'astro-icon/components';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE, skills } from '../consts';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title={`skills | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+	<Header />
+	<main class="res grid min-h-[calc(100dvh-4rem)] place-items-center gap-8">
+		<div class="font-bld grid place-items-center text-center text-lg">
+			星の数で技術の習熟度 (自己評価・相対評価)
+			<br />
+			上からの順番で好み・興味の強さを表しています
+		</div>
+		<div class="grid grid-cols-[repeat(auto-fit,_minmax(129px,_1fr))] gap-4 place-self-stretch">
+			{
+				(Object.keys(skills) as (keyof typeof skills)[]).map((v) => (
+					<div class="grid place-items-center gap-2">
+						<Icon name={v} size={48} />
+						{skills[v].name}
+						<p class=" text-yellow-500">
+							{() => {
+								const stars = [];
+
+								for (let i = 0; i < skills[v].rating; i++) {
+									stars.push('★');
+								}
+
+								return stars.join(' ');
+							}}
+						</p>
+					</div>
+				))
+			}
+		</div>
+	</main>
+	<Footer />
+</Layout>

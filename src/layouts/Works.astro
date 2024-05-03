@@ -6,7 +6,7 @@ import Layout from './Layout.astro';
 const { title, description, image } = Astro.props;
 ---
 
-<Layout title={title} description={description}>
+<Layout title={`${title} | works`} description={description}>
 	<Header />
 	<main class="markdown res min-h-dvh">
 		<img src={image} alt="" class="rounded" />
