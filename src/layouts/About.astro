@@ -1,0 +1,33 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Social from '../components/Social.astro';
+import Layout from './Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title="about" description="about">
+	<Header />
+	<main
+		class="res grid min-h-[calc(100dvh-4rem)] flex-col place-content-center place-items-center gap-4 lg:grid-cols-2"
+	>
+		<div class="grid place-items-center gap-4 lg:gap-8">
+			<div class="flex place-items-center gap-4 place-self-stretch lg:flex-col lg:gap-8">
+				<img
+					src="https://github.com/shallow90125.png"
+					alt=""
+					class="h-12 w-12 rounded-full lg:h-48 lg:w-48"
+				/>
+				<div class="text-2xl font-bold lg:text-4xl">shallow90125</div>
+			</div>
+			<div class="flex place-items-center gap-4">
+				<Social />
+			</div>
+		</div>
+		<div class="markdown">
+			<slot />
+		</div>
+	</main>
+	<Footer />
+</Layout>

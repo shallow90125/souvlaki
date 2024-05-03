@@ -180,11 +180,15 @@ hr {
 		@apply opacity-80;
 	}
 
+	h1 {
+		@apply px-2 py-4 text-2xl font-bold;
+	}
+
 	h3 {
 		@apply p-2 text-lg;
 	}
 }
 
 .res {
-	@apply mx-auto w-full max-w-screen-lg px-8 max-[360px]:max-w-72 max-[360px]:px-0;
+	@apply mx-auto w-full max-w-screen-lg px-8 py-4 max-[360px]:max-w-72 max-[360px]:px-0;
 }

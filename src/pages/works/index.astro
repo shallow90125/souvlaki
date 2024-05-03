@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const posts = (await getCollection('works')).sort(
+	(a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+);
+---
+
+<Layout title="abab" description="abba">
+	<Header />
+	<main class="res min-h-[calc(100dvh-4rem)]">
+		{
+			posts.map((post) => (
+				<a href={`/works/${post.slug}`}>
+					<img src={post.data.image} alt="" class="rounded" />
+					<h3 class=" text-lg">{post.data.title}</h3>
+					<time class="text-sm font-medium" datetime={post.data.date.toISOString()}>
+						{post.data.date.toLocaleDateString('sv-SE')}
+					</time>
+				</a>
+			))
+		}
+	</main>
+	<Footer />
+</Layout>

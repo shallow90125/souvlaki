@@ -1,16 +1,15 @@
 ---
-import Layout from '../components/Layout.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-	<main
-		class="animate-main-fade mx-auto grid min-h-dvh w-full max-w-screen-lg place-content-center place-items-center p-4"
-	>
+	<main class="res grid min-h-dvh animate-main-fade place-content-center place-items-center gap-8">
 		<div
 			class="animate-gradient bg-[linear-gradient(to_right,theme(colors.purple.300),theme(colors.purple.400),theme(colors.fuchsia.400),theme(colors.fuchsia.500),theme(colors.pink.500),theme(colors.pink.600),theme(colors.pink.700),theme(colors.pink.700),theme(colors.pink.700),theme(colors.pink.800),theme(colors.pink.800),theme(colors.pink.800),theme(colors.fuchsia.800),theme(colors.purple.800),theme(colors.violet.700),theme(colors.indigo.700),theme(colors.indigo.600),theme(colors.indigo.500),theme(colors.violet.500),theme(colors.violet.400),theme(colors.purple.400),theme(colors.purple.300))] bg-[length:600%_auto] bg-clip-text text-[12.5dvw] font-black text-transparent lg:text-[8rem]"
 		>
 			souvlaki.dev
 		</div>
+		<a href="/about">about me &#9654;</a>
 	</main>
 </Layout>
