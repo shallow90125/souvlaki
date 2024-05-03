@@ -160,3 +160,31 @@ hr {
 :root {
 	color-scheme: dark;
 }
+
+@layer base {
+	a {
+		@apply font-semibold transition;
+	}
+
+	a:hover {
+		@apply opacity-80;
+	}
+}
+
+.markdown {
+	a {
+		@apply text-purple-300;
+	}
+
+	a:hover {
+		@apply opacity-80;
+	}
+
+	h3 {
+		@apply p-2 text-lg;
+	}
+}
+
+.res {
+	@apply mx-auto w-full max-w-screen-lg px-8 max-[360px]:max-w-72 max-[360px]:px-0;
+}
