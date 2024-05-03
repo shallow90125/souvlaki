@@ -13,7 +13,7 @@ const posts = (await getCollection('works')).sort(
 <Layout title={`works | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
 	<Header />
 	<main
-		class="res grid min-h-[calc(100dvh-4rem)] grid-cols-[repeat(auto-fit,_minmax(344px,_1fr))] gap-4"
+		class="res grid min-h-[calc(100dvh-4rem)] gap-4 md:grid-cols-[repeat(auto-fit,_minmax(344px,_1fr))]"
 	>
 		{
 			posts.map((post) => (
