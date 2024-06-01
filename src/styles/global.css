@@ -204,6 +204,18 @@ hr {
 	iframe {
 		@apply py-4;
 	}
+
+	code {
+		@apply mx-2 rounded !bg-neutral-900 p-2;
+	}
+
+	pre {
+		@apply my-4 rounded !bg-neutral-900 p-4;
+	}
+
+	pre > code {
+		all: unset;
+	}
 }
 
 .res {

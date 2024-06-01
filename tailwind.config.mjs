@@ -6,7 +6,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Noto Sans JP', ...defaultTheme.fontFamily.sans]
+				sans: ['Noto Sans JP', ...defaultTheme.fontFamily.sans],
+				mono: ['Noto Sans Mono', ...defaultTheme.fontFamily.mono]
 			},
 			animation: {
 				gradient: 'gradient 60s linear infinite',
